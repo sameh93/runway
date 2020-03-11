@@ -1,1 +1,1 @@
-runway test ya rab haa
+runway test hya
