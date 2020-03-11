@@ -20,3 +20,4 @@ stacks:
       00CustomerName: ${default 00CustomerName::undefined}
       02VPCName: ${default 02VPCName::undefined}
       02VpcCIDR: ${default 02VpcCIDR::undefined}
+      01InternetGatewayName: ${default 01InternetGatewayName::undefined}

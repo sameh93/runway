@@ -114,6 +114,9 @@ Parameters:
     Default: 10.50.0.0/16
     AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
     ConstraintDescription: Must be a valid IP CIDR range of the form x.x.x.x/x.
+  01InternetGatewayName:
+    Type: String
+    Description: InternetGateway name
 Resources:
   ManagementPolicy:
     Properties:
@@ -229,5 +232,16 @@ Resources:
           - - Ref: 00CustomerName
             - "-"
             - Ref: 02VPCName
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value:
+          Fn::Join:
+          - ''
+          - - Ref: 00CustomerName
+            - "-"
+            - Ref: 01InternetGatewayName
   
 
