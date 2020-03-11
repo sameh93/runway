@@ -17,3 +17,6 @@ stacks:
       ProjName: ${default ProjName::undefined}
       OSId: ${default OSId::undefined}
       HighAvailability: ${default HighAvailability::undefined}
+      00CustomerName: ${default 00CustomerName::undefined}
+      02VPCName: ${default 02VPCName::undefined}
+      02VpcCIDR: ${default 02VpcCIDR::undefined}
