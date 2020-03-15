@@ -105,6 +105,9 @@ Parameters:
   00CustomerName:
     Type: String
     Description: Please Enter Customer Name
+  00CustomerName2:
+    Type: String
+    Description: Please Enter Customer Name
   02VPCName:
     Type: String
     Description: VPC name
@@ -241,6 +244,17 @@ Resources:
           Fn::Join:
           - ''
           - - Ref: 00CustomerName
+            - "-"
+            - Ref: 01InternetGatewayName
+  InternetGateway2:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value:
+          Fn::Join:
+          - ''
+          - - Ref: 00CustomerName2
             - "-"
             - Ref: 01InternetGatewayName
   
